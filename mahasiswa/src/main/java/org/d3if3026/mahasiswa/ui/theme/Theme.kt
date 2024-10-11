@@ -1,6 +1,5 @@
 package org.d3if3026.mahasiswa.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
