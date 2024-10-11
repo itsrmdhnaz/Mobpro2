@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import org.d3if3026.mahasiswa.ui.theme.Mobpro2Theme
+import org.d3if3026.mobpro2s.ui.WelcomeScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +21,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             Mobpro2Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
+                    WelcomeScreen(
+                        appLogo = R.mipmap.ic_launcher,
+                        appName = R.string.app_name,
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
@@ -30,18 +32,13 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
+fun MahasiswaAppPreview() {
     Mobpro2Theme {
-        Greeting("Android")
+        WelcomeScreen(
+            appLogo = R.mipmap.ic_launcher,
+            appName = R.string.app_name,
+        )
     }
 }
